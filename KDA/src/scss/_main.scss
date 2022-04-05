@@ -2,7 +2,7 @@
 	@include adaptiv-value(margin-top, 212, 95, 1);
 
 	&-header {
-		background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+		filter: brightness(40%);
 	}
 }
 
