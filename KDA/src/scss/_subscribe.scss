@@ -11,7 +11,8 @@
 
    &__subtitle {
       @include adaptiv-value(margin-top, 30, 20, 1);
-      @include adaptiv-value(margin-bottom, 15, 20, 1);
+      margin-bottom: 25px;
+      // @include adaptiv-value(margin-bottom, 25, 20, 1);
       font-weight: 400;
       font-size: 16px;
       line-height: 20px;
@@ -21,17 +22,26 @@
 
 .form {
 
-   &__item {
-      @include mwidth(400);
-   }
-
    &__list {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      @include adaptiv-value(gap, 20, 10, 1);
+      gap: 25px;
+      // @include adaptiv-value(gap, 20, 10, 1);
       align-content: flex-start;
-      height: 120px;
+      height: 125px;
+      // height: 170px;
+   }
+
+   .error {
+      height: 170px;
+   }
+
+   &__item {
+      @include mwidth(400);
+      display: flex;
+      flex-direction: column-reverse;
+      position: relative;
    }
 
    &__input {
@@ -65,6 +75,8 @@
       line-height: 20px;
    }
 
+
+
    &__item-btn {
       @include adaptiv-value(margin-top, 20, 10, 1);
       font-size: 16px;
@@ -81,17 +93,12 @@
    }
 }
 
-::-webkit-calendar-picker-indicator {
-   opacity: 0;
+.just-validate-error-label {
+   position: absolute;
+   top: -23.75px;
+   left: 21px;
 }
 
-.input {
-
-   &__email {}
-
-   &__date {}
-
-   &__tel {}
-
-   &__time {}
+::-webkit-calendar-picker-indicator {
+   opacity: 0;
 }
