@@ -47,6 +47,9 @@ let swiper = new Swiper('.swiper', {
    slidesPerView: "auto",
    centeredSlides: true,
    loop: true,
+   autoplay: {
+      delay: 5000,
+   },
    pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
