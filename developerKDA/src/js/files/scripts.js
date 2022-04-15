@@ -92,7 +92,6 @@ function pagination() {
       };
    };
 };
-pagination();
 
 observer.observe(pagBul, {
    childList: true,
