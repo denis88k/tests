@@ -20,7 +20,6 @@ navItem.forEach((item) => {
    item.addEventListener('click', (e) => {
       e.preventDefault();
       const eTarget = e.target;
-      // console.log(eTarget);
       if (eTarget.classList.contains('nav__link-active')) {
          eTarget.classList.remove('nav__link-active');
       } else {
@@ -70,7 +69,8 @@ function pagination() {
    console.log('tcnm');
    if (pagBuls[0].classList.contains('swiper-pagination-bullet-active')) {
       pagBuls.forEach((e) => {
-         e.classList.remove('pag-bullet-blue') && e.classList.remove('pag-bullet-purple')
+         e.classList.remove('pag-bullet-blue');
+         e.classList.remove('pag-bullet-purple');
       });
       for (let i = 1; i < (pagBuls.length); i++) {
          pagBuls[i].classList.add('pag-bullet-green');
@@ -78,14 +78,16 @@ function pagination() {
    };
    if (pagBuls[1].classList.contains('swiper-pagination-bullet-active')) {
       pagBuls.forEach((e) => {
-         e.classList.remove('pag-bullet-green') && e.classList.remove('pag-bullet-purple')
+         e.classList.remove('pag-bullet-green');
+         e.classList.remove('pag-bullet-purple');
       });
       pagBuls[0].classList.add('pag-bullet-blue');
       pagBuls[2].classList.add('pag-bullet-blue');
    };
    if (pagBuls[2].classList.contains('swiper-pagination-bullet-active')) {
       pagBuls.forEach((e) => {
-         e.classList.remove('pag-bullet-green') && e.classList.remove('pag-bullet-blue')
+         e.classList.remove('pag-bullet-green');
+         e.classList.remove('pag-bullet-blue');
       });
       for (let i = 0; i < (pagBuls.length - 1); i++) {
          pagBuls[i].classList.add('pag-bullet-purple');
@@ -94,7 +96,6 @@ function pagination() {
 };
 
 observer.observe(pagBul, {
-   childList: true,
    attributes: true,
    characterData: true
 });
