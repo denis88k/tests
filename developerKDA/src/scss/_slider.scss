@@ -223,12 +223,20 @@
    margin-right: 20px;
 }
 
-.swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active~.swiper-pagination-bullet:hover {
+.pag-bullet-green:hover {
    border-color: var(--green-light);
 }
 
-.swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active~.swiper-pagination-bullet:hover {
+.pag-bullet-blue:hover {
    border-color: var(--blue-light);
+}
+
+.pag-bullet-purple:hover {
+   border-color: var(--purple-light);
+}
+
+.swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active~.swiper-pagination-bullet:hover {
+   border-color: var(--green-light);
 }
 
 .swiper-pagination {
