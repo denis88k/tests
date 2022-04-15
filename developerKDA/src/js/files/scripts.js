@@ -61,6 +61,44 @@ let swiper = new Swiper('.swiper', {
    },
 });
 
+const pagBul = document.querySelector('.swiper-pagination');
+
+const observer = new MutationObserver(pagination)
+
+function pagination() {
+   const pagBuls = document.querySelectorAll('.swiper-pagination-bullet');
+   console.log('tcnm');
+   if (pagBuls[0].classList.contains('swiper-pagination-bullet-active')) {
+      pagBuls.forEach((e) => {
+         e.classList.remove('pag-bullet-blue') && e.classList.remove('pag-bullet-purple')
+      });
+      for (let i = 1; i < (pagBuls.length); i++) {
+         pagBuls[i].classList.add('pag-bullet-green');
+      };
+   };
+   if (pagBuls[1].classList.contains('swiper-pagination-bullet-active')) {
+      pagBuls.forEach((e) => {
+         e.classList.remove('pag-bullet-green') && e.classList.remove('pag-bullet-purple')
+      });
+      pagBuls[0].classList.add('pag-bullet-blue');
+      pagBuls[2].classList.add('pag-bullet-blue');
+   };
+   if (pagBuls[2].classList.contains('swiper-pagination-bullet-active')) {
+      pagBuls.forEach((e) => {
+         e.classList.remove('pag-bullet-green') && e.classList.remove('pag-bullet-blue')
+      });
+      for (let i = 0; i < (pagBuls.length - 1); i++) {
+         pagBuls[i].classList.add('pag-bullet-purple');
+      };
+   };
+};
+pagination();
+
+observer.observe(pagBul, {
+   childList: true,
+   attributes: true,
+   characterData: true
+});
 
 //inputMask
 const form = document.querySelector('.form__request');
